@@ -1,0 +1,518 @@
+/* Medium Layout: 1280px */
+/* Tablet Layout: 768px */
+/* Mobile Layout: 320px */
+/* Wide Mobile Layout: 480px */
+/* =================================== */
+/*  Basic Style 
+/* =================================== */
+
+
+
+@media screen and (orientation: portrait){
+
+}
+
+ /* spinner */
+
+
+@keyframes loading {
+ 
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 9001px;
+  }
+}
+
+@-webkit-keyframes loadingspinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  15% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  90% {
+    -webkit-transform: rotate(1120deg);
+            transform: rotate(1120deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+  }
+}
+
+@keyframes loadingspinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  15% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  90% {
+    -webkit-transform: rotate(1120deg);
+            transform: rotate(1120deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+  }
+}
+
+
+
+/*  mes propriétés CSS ici */
+
+/* html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  
+}
+  .flex{
+      display: flex;
+      justify-content:space-around;      
+  }
+
+  
+
+  .logo{
+    align-self: center;    
+    position: relative;
+    margin-bottom: 5px;
+    
+}
+
+
+
+  /* Header */
+  
+  
+  header{
+    margin: 0;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+  
+  
+  
+  svg {
+    
+    fill: currentColor;
+  }  
+
+  .loading {
+    /* loading screen hiding whole screen for the duration determined */
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    -webkit-animation: loading 0s 2s both;
+            animation: loading 0s 2s both;
+  }
+  
+  .loading img {
+    height: 25%;
+    width: 25%;
+    -webkit-animation: loadingspinner 1.2s infinite;
+            animation: loadingspinner 1.2s infinite;
+  }
+
+
+  
+  
+  .resa {
+
+    flex-direction: column-reverse;
+  }
+   
+  .resa {
+    overflow: hidden;
+    padding: 0 5vw;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    text-align: center;
+    background:  #eaeaea;
+  }
+
+  .location {
+    padding: 0 5vw;
+    display: flex;
+    justify-content: center;
+    background-color:lightgrey;
+  }
+
+  .location p {
+    font-family:'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+   
+  }
+
+
+
+  .resa h1 {
+    font-family:'Roboto', sans-serif;
+    
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  
+  .resa p {
+    font-family: 'Roboto', sans-serif;     
+    font-size: 1.2rem;
+  }
+  
+  .resa p .ico {
+    display: inline-block;
+    
+    vertical-align: middle;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+   /* bouton */
+  .btn {
+  
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 4px lightgrey;    
+    font-size:  large;
+    padding: 1rem;
+    margin-bottom: 7vw;
+    width: 60vw;
+    border-radius: 10rem;  
+    align-self: center;
+  transition: 250ms;  
+    background: linear-gradient(170deg, #ff79da, #9356dc);
+  }
+  
+  
+  
+  .btn:hover {
+    background: linear-gradient(170deg, #ff79da, #9356dc);
+   box-shadow: 0px 0px 20px 10px lightgrey;
+  }
+  
+  
+  /* nav */
+  .choix{
+    
+    margin: 0;
+    flex-direction: column;
+}
+
+  .textChoix{
+    align-self: flex-start;
+    padding-left: 2%;
+    margin: 1%;    
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+.choixList{
+  flex-wrap: wrap;
+  
+}
+  
+  nav .ico {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  nav ul {         
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    margin: 1%;
+    
+  }  
+  
+  nav li {
+    display: block;
+    position: relative;
+    padding: 5% 5%;
+    width:90%;
+    white-space: nowrap;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    
+  }
+  
+  nav li span {
+   position: absolute;
+   left: -10px;
+    display: inline-block;
+    
+    background-color: #9356DC;
+    
+    border-radius: 50%;
+    text-align: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+  }  
+  
+  
+  nav .activation {
+    background-color: #f1ebf7;
+    border-radius: 1rem;
+  }
+  
+  nav .activation svg {
+    fill: #9356DC;
+  }
+
+  /* section resto */
+  
+  main { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    margin-bottom: 15%;
+  }
+  
+  main a {
+   
+    text-decoration: none;      
+    color: black;    
+  }
+  
+    
+  article a .new {
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    display: inline-block;    
+    font-size: 18px;  
+    padding: 2%;    
+    background-color: #99E2D0;    
+    color: green; 
+    border-radius: 0.5rem;  
+  }
+  .restaurants {
+    padding: 0 15px;
+    background-color: #f6f6f6;
+    align-items: center;
+  }
+
+  .titre {
+    align-self: start;
+  }
+
+  .card{
+    height: fit-content;  
+    text-decoration: none;
+    box-shadow: 0px 0px 20px 4px rgb(201, 201, 201); 
+    box-sizing: border-box;    
+    border-radius: 15px;
+    overflow: hidden;        
+    margin:  20px 0;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .card__img {
+    position: relative;
+    width:100%;
+    z-index: 1;
+  }
+  .card__img img {
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px 20px;
+    border-top-right-radius: 20px 20px;
+  }
+  .card-bas  {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+  }
+
+  .text  {
+    padding: 0 1rem;
+  
+  }
+
+  .text p {
+    font-size: 14px;    
+    margin-top: 0.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .text h3 {
+    margin-top: 0.6rem;
+    margin-bottom: 0.2rem;
+   
+    font-family: Roboto;
+    font-size: 15px;
+  }
+
+  .heart {    
+    padding: 0px;
+    position: relative;
+    bottom: 10px;
+    
+    cursor:pointer; 
+    
+    
+    height: 25px;
+    width: 25px;
+    right: 40px;
+    top: 20px;
+  }
+  
+   
+
+  a h2 {
+    margin-bottom: 5px;
+  }
+
+  article p {
+    margin-top: 5px;
+  }
+  
+  main a .ico {
+    position: absolute;
+    cursor:pointer; 
+    overflow:hidden; 
+    
+    height: 25px;
+    width: 25px;
+    right: 40px;
+    top: 20px;
+  }  
+    
+  main a .liked {
+    opacity: 0;    
+/*     
+    transition: 700ms;
+    transform-origin:29.5px 29.5px; */
+  }
+
+  main a .liked:hover {
+    opacity: 1;
+  }
+  .fa-stack {
+    font-size: x-large;
+    position: relative;
+    bottom: 10px;
+    cursor: pointer;
+  }
+  .fa-stack :nth-child(2) {
+    color: transparent;
+    transition: all 350ms;
+    padding: 0px;
+  }
+  .fa-stack :nth-child(2):hover {
+    background: linear-gradient(to bottom left, #9356dc, #ff79da);
+    font-size: large;
+    transform: scale(2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+  
+  
+
+
+  /* footer*/
+  
+  footer h2
+  
+   {
+    font-family: 'Shrikhand', cursive;  
+  }  
+
+  footer {
+    background-color: #353535;
+    color: white;
+    padding: 1% 1% 3%;   
+    font-size: 1rem;
+  }
+  
+  footer .ico {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  footer ul {
+    padding-left: 0;
+  }
+  
+  footer li {
+    list-style-type: none;
+    padding: 8px;
+  }
+
+/* ordi*/
+@media screen and (max-width: 1149px) and (orientation: landscape)
+
+ 
+ {
+
+}
+
+
+
